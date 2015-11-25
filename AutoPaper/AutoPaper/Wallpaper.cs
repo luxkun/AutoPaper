@@ -107,9 +107,10 @@ namespace AutoPaper
         {
             var policyA = (string) Conf.GetConf("policyA");
             var policyB = ((string) Conf.GetConf("policyB")).ToLower();
-            var filter = (string) Conf.GetConf("filter");
+            var filter = (string)Conf.GetConf("filter");
+            var subreddit = (string)Conf.GetConf("subreddit");
             filter = null;
-            var rssUri = new Uri($"https://www.reddit.com/r/WQHD_Wallpaper/{policyB}/.rss");
+            var rssUri = new Uri($"https://www.reddit.com/r/{subreddit}/{policyB}/.rss");
             Uri result = null;
             var lastUri = (Uri) Conf.GetConf("lastUri");
             using (var feedReader = XmlReader.Create(rssUri.ToString()))

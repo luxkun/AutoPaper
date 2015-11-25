@@ -25,10 +25,10 @@ namespace AutoPaper.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1800000")]
-        public int delay {
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public long delay {
             get {
-                return ((int)(this["delay"]));
+                return ((long)(this["delay"]));
             }
             set {
                 this["delay"] = value;

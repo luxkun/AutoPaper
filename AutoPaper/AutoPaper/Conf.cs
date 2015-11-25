@@ -14,7 +14,7 @@ namespace AutoPaper
         private static readonly Dictionary<string, Func<object, bool>> costrains = new Dictionary
             <string, Func<object, bool>>
         {
-            {"delay", (object v) => (int)v > 0},
+            {"delay", (object v) => (long)v > 0},
             {"policyA", (object v) => possiblePoliciesA.Contains((string) v)},
             {"policyB", (object v) => possiblePoliciesB.Contains((string) v)},
             {"style", (object v) => possibleStyles.Contains((string) v)}
@@ -46,6 +46,7 @@ namespace AutoPaper
         internal static void Save()
         {
             Settings.Default.Save();
+            MyApplicationContext.InitializeWorker();
         }
 
         internal static object GetConf(string k)

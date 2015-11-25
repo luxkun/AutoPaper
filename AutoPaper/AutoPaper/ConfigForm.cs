@@ -17,7 +17,7 @@ namespace AutoPaper
         {
             InitializeComponent();
             
-            delayTextBox.Text = Utils.SecondsToMinutes((int)Conf.GetConf("delay")).ToString();
+            delayTextBox.Text = Utils.SecondsToMinutes((long)Conf.GetConf("delay")).ToString();
             
             policyAComboBox.Items.AddRange(Conf.possiblePoliciesA.ToArray());
             Utils.SelectComboBoxItemByText(policyAComboBox, (string)Conf.GetConf("policyA"));

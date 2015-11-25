@@ -64,16 +64,17 @@ namespace AutoPaper
 
         public static void InitializeWorker()
         {
-            InitializeWorker((int)Conf.GetConf("delay"));
+            InitializeWorker((long)Conf.GetConf("delay"));
         }
 
-        public static void InitializeWorker(int delay)
+        public static void InitializeWorker(long delay)
         {
             if (changeTimer != null)
             {
                 changeTimer.Enabled = false;
                 changeTimer = null;
             }
+            Console.WriteLine($"Starting timer: {delay}");
             changeTimer = new System.Timers.Timer(delay);
             changeTimer.Elapsed += Wallpaper.ChangeWallpaper;
             changeTimer.AutoReset = false;

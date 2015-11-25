@@ -7,12 +7,12 @@ namespace AutoPaper
 {
     internal class Utils
     {
-        internal static int MinutesToSeconds(int v)
+        internal static long MinutesToSeconds(long v)
         {
             return v * 60 * 1000;
         }
 
-        internal static int SecondsToMinutes(int v)
+        internal static long SecondsToMinutes(long v)
         {
             return v / (60 * 1000);
         }

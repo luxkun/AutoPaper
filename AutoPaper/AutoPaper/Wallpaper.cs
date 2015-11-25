@@ -30,6 +30,7 @@ namespace AutoPaper
 
         public static void ChangeWallpaper()
         {
+            Console.WriteLine("Changing wallpaper.");
             var path = GetNextBackground();
 
             var style = (string) Conf.GetConf("style");
@@ -62,6 +63,7 @@ namespace AutoPaper
                 0,
                 tempPath,
                 0x01 | 0x02);
+            MyApplicationContext.InitializeWorker();
         }
 
         private static string DownloadAndSave(Uri uri)

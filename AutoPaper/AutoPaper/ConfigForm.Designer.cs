@@ -39,6 +39,8 @@
             this.filterTextBox = new System.Windows.Forms.TextBox();
             this.styleComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.subredditTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(815, 288);
+            this.saveButton.Location = new System.Drawing.Point(815, 317);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(111, 56);
             this.saveButton.TabIndex = 2;
@@ -70,7 +72,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(690, 288);
+            this.closeButton.Location = new System.Drawing.Point(690, 317);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(119, 56);
             this.closeButton.TabIndex = 3;
@@ -140,13 +142,32 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Style:";
             // 
+            // subredditTextBox
+            // 
+            this.subredditTextBox.Location = new System.Drawing.Point(537, 240);
+            this.subredditTextBox.Name = "subredditTextBox";
+            this.subredditTextBox.Size = new System.Drawing.Size(389, 38);
+            this.subredditTextBox.TabIndex = 12;
+            this.subredditTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 243);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 32);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Subreddit:";
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(938, 356);
+            this.ClientSize = new System.Drawing.Size(938, 385);
+            this.Controls.Add(this.subredditTextBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.styleComboBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.filterTextBox);
@@ -178,5 +199,7 @@
         private System.Windows.Forms.TextBox filterTextBox;
         private System.Windows.Forms.ComboBox styleComboBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox subredditTextBox;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -90,5 +90,17 @@ namespace AutoPaper.Properties {
                 this["style"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Wallpaper")]
+        public string subreddit {
+            get {
+                return ((string)(this["subreddit"]));
+            }
+            set {
+                this["subreddit"] = value;
+            }
+        }
     }
 }

@@ -20,5 +20,8 @@
     <Setting Name="style" Type="System.String" Scope="User">
       <Value Profile="(Default)">Centered</Value>
     </Setting>
+    <Setting Name="subreddit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Wallpaper</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

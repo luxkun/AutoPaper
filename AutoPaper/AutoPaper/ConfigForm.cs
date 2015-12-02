@@ -29,6 +29,8 @@ namespace AutoPaper
 
             styleComboBox.Items.AddRange(Conf.possibleStyles.ToArray());
             Utils.SelectComboBoxItemByText(styleComboBox, (string)Conf.GetConf("style"));
+
+            subredditTextBox.Text = (string)Conf.GetConf("subreddit");
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -46,6 +48,7 @@ namespace AutoPaper
             checks = checks && Conf.SetConf("policyB", policyBComboBox.Text);
             checks = checks && Conf.SetConf("filter", filterTextBox.Text);
             checks = checks && Conf.SetConf("style", styleComboBox.Text);
+            checks = checks && Conf.SetConf("subreddit", subredditTextBox.Text);
             if (checks)
             {
                 Conf.Save();

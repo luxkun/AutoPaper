@@ -32,6 +32,8 @@ namespace AutoPaper
         {
             Console.WriteLine("Changing wallpaper.");
             var path = GetNextBackground();
+            if (path == null)
+                return;
 
             var style = (string) Conf.GetConf("style");
             var s = new WebClient().OpenRead(path);
